@@ -31,4 +31,10 @@ module.exports = {
       res.redirect('/');
     });
   }
+  , deleteBook: function(req, res) {
+    var id = req.params.id;
+    Books.deleteOne({_id: id}).then(function() {
+      res.redirect('/');
+    });
+  }
 };

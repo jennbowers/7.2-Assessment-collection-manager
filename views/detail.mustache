@@ -49,5 +49,11 @@
       </div>
     </form>
     {{/model}}
+    <h3>Just Want to Delete this Book?</h3>
+    {{#model}}
+    <form class="delete-book" action="/delete/{{_id}}" method="post">
+      <input type="submit" name="delete" value="Delete This Book">
+    </form>
+    {{/model}}
   </body>
 </html>
