@@ -23,17 +23,29 @@
         {{/seriesTitle}}
       </form>
     {{/model}}
-    <!-- <h3>Want to add to my collection?</h3>
-    <form class="add-book" action="/add" method="post">
-      <div class="title-div">
-        <input type="text" name="bookTitle" placeholder="Title">
+    <h3>Need to edit something?</h3>
+    <form class="edit-book" action="/edit/{{_id}}" method="post">
+      <div class="edit-title-div">
+        <input type="text" name="editTitle" placeholder="Edit Title">
       </div>
-      <div class="author-div">
-        <input type="text" name="author" placeholder="Author's Name">
+      <div class="edit-author-div">
+        <input type="text" name="editAuthor" placeholder="Edit Author's Name">
+      </div>
+      <div class="if-applicable">
+        <p>*if applicable</p>
+      </div>
+      <div class="edit-series-title-div">
+        <input type="text" name="edit-series-title" placeholder="Edit Series Title">
+      </div>
+      <div class="edit-series-bookname-div">
+        <input type="text" name="edit-series-bookname" placeholder="Add or Edit the Title of Another Book in the Series">
+      </div>
+      <div class="edit-series-order-div">
+        <input type="text" name="edit-series-order" placeholder="Add or Edit the Order of Another Book in the Series">
       </div>
       <div class="submit">
-        <input type="submit" name="submit" value="Add">
+        <input type="submit" name="submit" value="Submit Changes">
       </div>
-    </form> -->
+    </form>
   </body>
 </html>

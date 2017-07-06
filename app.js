@@ -4,6 +4,7 @@ const mustacheExpress = require('mustache-express');
 const bodyParser = require('body-parser');
 const Books = require('./models/books');
 const indexController = require('./controllers/indexController');
+const detailController = require('./controllers/detailController');
 
 const app = express();
 app.engine('mustache', mustacheExpress());
@@ -27,6 +28,9 @@ app.post('/add', indexController.addBooks);
 
 // go to detail page when click on book
 app.post('/detail/:id', indexController.toDetail);
+
+// to edit already created book
+app.post('/edit/:id', detailController.editBookDetail);
 
 app.listen(3000, function() {
   console.log('Successfully started express application');
