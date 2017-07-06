@@ -24,6 +24,7 @@
       </form>
     {{/model}}
     <h3>Need to edit something?</h3>
+    {{#model}}
     <form class="edit-book" action="/edit/{{_id}}" method="post">
       <div class="edit-title-div">
         <input type="text" name="editTitle" placeholder="Edit Title">
@@ -35,17 +36,18 @@
         <p>*if applicable</p>
       </div>
       <div class="edit-series-title-div">
-        <input type="text" name="edit-series-title" placeholder="Edit Series Title">
+        <input type="text" name="editSeriesTitle" placeholder="Edit Series Title">
       </div>
       <div class="edit-series-bookname-div">
-        <input type="text" name="edit-series-bookname" placeholder="Add or Edit the Title of Another Book in the Series">
+        <input type="text" name="editSeriesBookname" placeholder="Add or Edit the Title of Another Book in the Series">
       </div>
       <div class="edit-series-order-div">
-        <input type="text" name="edit-series-order" placeholder="Add or Edit the Order of Another Book in the Series">
+        <input type="text" name="editSeriesOrder" placeholder="Add or Edit the Order of Another Book in the Series">
       </div>
       <div class="submit">
         <input type="submit" name="submit" value="Submit Changes">
       </div>
     </form>
+    {{/model}}
   </body>
 </html>

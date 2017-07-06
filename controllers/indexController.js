@@ -20,7 +20,7 @@ module.exports = {
   , toDetail: function(req, res) {
     var id = req.params.id;
     Books.findOne({_id: id}).then(function(result) {
-      console.log(result);
+      // console.log(result);
       if (result) {
         res.render('detail', {model: result});
       }

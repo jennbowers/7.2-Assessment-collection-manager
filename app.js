@@ -32,6 +32,11 @@ app.post('/detail/:id', indexController.toDetail);
 // to edit already created book
 app.post('/edit/:id', detailController.editBookDetail);
 
+// ghetto validation for adding order number without a series book
+app.get('/error', function(req, res) {
+  res.send('You must enter a series book name to be associated with the order number, please go back and try again');
+});
+
 app.listen(3000, function() {
   console.log('Successfully started express application');
 });
