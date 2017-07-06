@@ -6,5 +6,27 @@
   </head>
   <body>
     <h1>Welcome to my Library</h1>
+    <h3>Want to add to my collection?</h3>
+    <form class="add-book" action="/add" method="post">
+      <div class="title-div">
+        <input type="text" name="bookTitle" placeholder="Title">
+      </div>
+      <div class="author-div">
+        <input type="text" name="author" placeholder="Author's Name">
+      </div>
+      <div class="submit">
+        <input type="submit" name="submit" value="Add">
+      </div>
+    </form>
+    <h3>Check out my collection!</h3>
+    {{#model}}
+      <form class="detail" action="/detail/{{_id}}" method="post">
+        
+      </form>
+      <div class="book-item">
+        {{title}} by: {{author}}
+      </div>
+
+    {{/model}}
   </body>
 </html>
