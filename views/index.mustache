@@ -21,11 +21,11 @@
     <h3>Check out my collection!</h3>
     {{#model}}
       <form class="detail" action="/detail/{{_id}}" method="post">
-        
+        <div class="book-item">
+          {{title}} by: {{author}}
+        </div>
+        <input type="submit" name="seeMore" value="See More or Edit">
       </form>
-      <div class="book-item">
-        {{title}} by: {{author}}
-      </div>
 
     {{/model}}
   </body>

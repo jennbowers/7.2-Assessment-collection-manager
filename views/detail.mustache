@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to my Library</title>
+  </head>
+  <body>
+    <h3>Find Out More!</h3>
+    {{#model}}
+        <div class="detail-book-item">
+          {{title}} by: {{author}}
+        </div>
+        {{#seriesTitle}}
+        <div class="detail-series">
+          Part of the {{seriesTitle}} series.
+          Other books include:
+          {{#series}}
+          <div class="detail-in-series">
+            {{bookName}} #{{order}}
+          </div>
+          {{/series}}
+        </div>
+        {{/seriesTitle}}
+      </form>
+    {{/model}}
+    <!-- <h3>Want to add to my collection?</h3>
+    <form class="add-book" action="/add" method="post">
+      <div class="title-div">
+        <input type="text" name="bookTitle" placeholder="Title">
+      </div>
+      <div class="author-div">
+        <input type="text" name="author" placeholder="Author's Name">
+      </div>
+      <div class="submit">
+        <input type="submit" name="submit" value="Add">
+      </div>
+    </form> -->
+  </body>
+</html>

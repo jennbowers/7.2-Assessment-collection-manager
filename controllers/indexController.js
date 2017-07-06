@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 module.exports = {
   renderAllIndex: function(req, res) {
     Books.find({}).then(function(results) {
-      console.log(results);
+      // console.log(results);
       res.render('index', {model: results});
     });
   }
@@ -19,6 +19,11 @@ module.exports = {
   }
   , toDetail: function(req, res) {
     var id = req.params.id;
-    Books.findOne({_id: id})
+    Books.findOne({_id: id}).then(function(result) {
+      console.log(result);
+      if (result) {
+        res.render('detail', {model: result});
+      }
+    });
   }
 };
